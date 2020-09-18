@@ -24,7 +24,10 @@ const useStyles = makeStyles((theme) => ({
     height: 0,
     paddingTop: "56.25%", // 16:9
   },
-  
+  noImage:{
+    fontSize: 50,
+    margin:"30px 120px"
+  }
 }));
 
 function FoodCard({data}) {
@@ -32,7 +35,6 @@ function FoodCard({data}) {
   const { name, picture, cuisines, priceRange, rating } = data;
   const price = priceRange;
   const rangePrice = [...Array(price)];
-
   return (
     <div>
       <Card className={classes.root}>
@@ -41,7 +43,7 @@ function FoodCard({data}) {
           className={classes.media}
           image={picture}
         /> :
-        <CircularProgress style={{position:"relative", left:"45%", margin:"50px 0"}}/>
+        <BrokenImageIcon className={classes.noImage}/>
         }
         <CardHeader
             
