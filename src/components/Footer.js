@@ -48,7 +48,7 @@ function Footer() {
     return(
         <div className={classes.root}>
         <Container maxWidth="lg">
-            <Typography style={{textAlign:"right"}}>© gozomato.co.id Hak cipta dilindungi undang-undang</Typography>
+            <Typography style={{textAlign:"right"}}>© gozomato.co.id #learnathome goacademy</Typography>
         </Container>
         </div>
     );
