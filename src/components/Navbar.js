@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Navbar() {
+function Navbar(props) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -67,9 +67,9 @@ function Navbar() {
               variant="h6"
               className={classes.sectionDesktop}
             >
-              
+              Download the app
             </Typography>
-            <Button color="inherit" className={classes.navButton}>
+            <Button color="inherit" onClick={() => props.scrollToDownload()} className={classes.navButton}>
               Download
             </Button>
           </Toolbar>

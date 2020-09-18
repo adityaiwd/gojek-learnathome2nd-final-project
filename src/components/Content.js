@@ -78,6 +78,7 @@ function Content(props) {
       }
     };
     searchRestaurantsFromCity();
+    console.log(restaurants.length)
   }, [props.city,JSON.stringify(restaurants)]);
 
 
@@ -96,7 +97,7 @@ function Content(props) {
       <Container maxWidth="lg">
         <div className={classes.titles}>
           <Typography className={classes.title} variant="h6">
-           {citySuggestions? "Discover the best food & drinks in "+props.city.charAt(0).toUpperCase() + props.city.slice(1) : "Sorry we couldn't find your city" } 
+           {JSON.stringify(restaurants)? "Discover the best food & drinks in "+props.city.charAt(0).toUpperCase() + props.city.slice(1) : "Sorry we couldn't find your city" } 
           </Typography>
           <Typography className={classes.subtitle}>
             {restaurants ? "Have a look at delicious food, choose what you like, some of them can deliver to you." : ""}
