@@ -7,7 +7,7 @@ import {
   Typography,
   Container,
 } from "@material-ui/core";
-// import FastfoodRoundedIcon from "@material-ui/icons/FastfoodRounded";
+import FastfoodRoundedIcon from "@material-ui/icons/FastfoodRounded";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -56,10 +56,10 @@ function Navbar() {
         <Container maxWidth="lg">
           <Toolbar>
             <Typography className={classes.title} variant="h6">
-              {/* <FastfoodRoundedIcon
+              <FastfoodRoundedIcon
                 fontSize="large"
                 style={{ marginRight: 10 }}
-              /> */}
+              />
               gozomato
             </Typography>
             <Typography
