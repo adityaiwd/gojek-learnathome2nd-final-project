@@ -37,7 +37,7 @@ other dependencies such as:
 REACT_APP_ZOMATO_API_KEY=<your api key>
 ```
 
-### Step 3
+### Step 4
 
 - run it on your local server using
 ```shell
