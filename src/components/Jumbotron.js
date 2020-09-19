@@ -5,6 +5,7 @@ import {
   Typography,
   TextField,
   Container,
+  Button
 } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -43,6 +44,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Nexa",
     fontSize: 20,
     width: "100%",
+    display:"inline",
+    justifyContent:"center",
+    alignItems:"center",
+    textAlign:"center"
   },
   jumboBg: {
     backgroundImage: `url(${Background})`,
@@ -56,16 +61,16 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    position: "relative",
     width: "100%",
   },
   navButton: {
-    width: "100%",
+    width: "auto",
     height: "100%",
+    padding: "5px 25px",
+    marginTop: 10,
     fontFamily: "Nexa",
     textTransform: "none",
     backgroundColor: "white",
-    borderRadius: "0 5px 5px 0",
     color: "black",
     "&:hover": {
       backgroundColor: "#E0E0E0",
@@ -111,6 +116,9 @@ function Jumbotron(props) {
               placeholder={"current city: " + props.city}
               onChange={(e) => setTerm(e.target.value)}
             />
+            <Button color="inherit" onClick={term? onFormSubmit : ""} className={classes.navButton}>
+              Change City
+            </Button>
           </form>
         </div>
       </Container>

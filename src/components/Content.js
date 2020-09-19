@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getCities, searchRestaurants } from "./api";
 import { parseCitySuggestions, parseSearchRestaurants } from "./utils";
 import FoodCard from "./FoodCard";
+import MobileFoodCard from "./MobileFoodCard";
 import {
   Button,
   makeStyles,
@@ -18,8 +19,10 @@ const useStyles = makeStyles((theme) => ({
   },
   sectionDesktop: {
     display: "none",
-    [theme.breakpoints.up("md")]: {
-      display: "inline",
+    [theme.breakpoints.up("sm")]: {
+      justifyContent: "center",
+    display: "flex",
+    flexDirection: "column",
     },
   },
   titles: {
@@ -37,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
   },
   sectionMobile: {
     display: "flex",
-    [theme.breakpoints.up("md")]: {
+    justifyContent:"center",
+    [theme.breakpoints.up("sm")]: {
       display: "none",
     },
   },
@@ -53,11 +57,30 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "#007AA3",
       color: "#FFF",
     },
+    textAlign:"center"
+  },
+  moreMobileButton: {
+    padding: "10px 20px",
+    fontSize: 17,
+    marginBottom: 50,
+    fontFamily: "Nexa",
+    textTransform: "none",
+    color: "white",
+    backgroundColor: "#00A7E1",
+    "&:hover": {
+      backgroundColor: "#007AA3",
+      color: "#FFF",
+    },
+    display: "flex",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
   },
   cards: {
-    alignItems: "center",
+    justifyContent: "center",
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "row",
+    alignContent:"center"
   },
 }));
 
@@ -88,14 +111,6 @@ function Content(props) {
     searchRestaurantsFromCity();
   }, [props.city, JSON.stringify(restaurants)]);
 
-  // if (!restaurants && !cityQuery) return false;
-
-  // useEffect(() => {
-  //   const cities = parseCitySuggestions(await getCities(cityQuery));
-  //   setCitySuggestions(cities);
-  //   setRestaurants(
-  //   )
-  // }, [cityQuery,restaurants])
 
   return (
     <div className={classes.root}>
@@ -156,7 +171,8 @@ function Content(props) {
           </Grid>
         ) : (
           <div className={classes.cards}>
-            {citySuggestions.length > 0 && (
+          <div className={classes.sectionDesktop}>
+          {citySuggestions.length > 0 && (
               <Grid container spacing={3} style={{ marginBottom: 50 }}>
                 {restaurants.map((e) => (
                   <Grid item lg={3} md={4} sm={6} xs={12}>
@@ -165,14 +181,22 @@ function Content(props) {
                 ))}
               </Grid>
             )}
-            <Button
-              variant="contained"
-              color="inherit"
-              className={classes.navButton}
-            >
-              More
-            </Button>
           </div>
+            <div className={classes.sectionMobile}>
+            {citySuggestions.length > 0 && (
+              <Grid container spacing={3} style={{ marginBottom: 100 }}>
+                {restaurants.map((e) => (
+                  <Grid item lg={3} md={4} sm={6} xs={12}>
+
+                    <MobileFoodCard key={e.id} data={e} />
+                  </Grid>
+
+                ))}
+              </Grid>
+            )}
+            </div>
+          </div>
+          
         )}
       </Container>
     </div>

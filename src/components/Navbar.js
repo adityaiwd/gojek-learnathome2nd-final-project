@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
   navButton: {
     marginLeft: 20,
-    marginRight:-25,
+    marginRight:-20,
     fontFamily: "Nexa",
     textTransform: "none",
     backgroundColor: "#00A7E1",
