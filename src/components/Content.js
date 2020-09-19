@@ -85,30 +85,32 @@ const useStyles = makeStyles((theme) => ({
 
 function Content(props) {
   const classes = useStyles();
+  const cityQuery = props.city;
   const [citySuggestions, setCitySuggestions] = useState([]);
   const [restaurants, setRestaurants] = useState([]);
   const [loading, setLoading] = useState(false);
+  let restaurantArray = JSON.stringify(restaurants);
 
-  const searchRestaurantsFromCity = async () => {
-    setLoading(true);
-    const cities = parseCitySuggestions(await getCities(props.city));
-    setCitySuggestions(cities);
-
-    if (cities.length > 0) {
-      const restaurants = parseSearchRestaurants(
-        await searchRestaurants(cities[0].id)
-      );
-      setLoading(false);
-      setRestaurants(restaurants);
-    } else {
-      setRestaurants([]);
-      setLoading(false);
-    }
-  };
   useEffect(() => {
+    const searchRestaurantsFromCity = async () => {
+      setLoading(true);
+      const cities = parseCitySuggestions(await getCities(cityQuery));
+      setCitySuggestions(cities);
+  
+      if (cities.length > 0) {
+        const restaurants = parseSearchRestaurants(
+          await searchRestaurants(cities[0].id)
+        );
+        setLoading(false);
+        setRestaurants(restaurants);
+      } else {
+        setRestaurants([]);
+        setLoading(false);
+      }
+    };
     setLoading(true);
     searchRestaurantsFromCity();
-  }, [props.city, JSON.stringify(restaurants)]);
+  }, [cityQuery, restaurantArray]);
 
 
   return (
