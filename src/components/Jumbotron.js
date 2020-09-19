@@ -103,7 +103,7 @@ function Jumbotron(props) {
           }}
           label="Search City"
           variant="outlined"
-          placeholder={"current city: "}
+          placeholder={"current city: "+props.city}
           onChange={e => setTerm(e.target.value)}
         />
 
