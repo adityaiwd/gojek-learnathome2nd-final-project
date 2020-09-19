@@ -1,6 +1,11 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Background from "../assets/jumbotronbg2.jpg";
-import { makeStyles, Typography, TextField, Container} from "@material-ui/core";
+import {
+  makeStyles,
+  Typography,
+  TextField,
+  Container,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
       color: "white",
     },
     height: 10,
-    
   },
   focusedLabel: {},
   sectionDesktop: {
@@ -32,13 +36,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 30,
     fontWeight: 500,
     textAlign: "center",
-    marginBottom: 30
+    marginBottom: 30,
   },
   subtitle: {
     color: "white",
     fontFamily: "Nexa",
     fontSize: 20,
-    width:"100%",
+    width: "100%",
   },
   jumboBg: {
     backgroundImage: `url(${Background})`,
@@ -61,58 +65,55 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Nexa",
     textTransform: "none",
     backgroundColor: "white",
-    borderRadius:"0 5px 5px 0",
+    borderRadius: "0 5px 5px 0",
     color: "black",
     "&:hover": {
       backgroundColor: "#E0E0E0",
     },
   },
 }));
+
 function Jumbotron(props) {
   const classes = useStyles();
-  const [term,setTerm] = useState("");
+  const [term, setTerm] = useState("");
   const onFormSubmit = (e) => {
     e.preventDefault();
     props.onSubmit(term);
     setTerm("");
-  }
+  };
 
   return (
     <div className={classes.jumboBg}>
-    <Container maxWidth="lg">
-
-      <Typography className={classes.title}>
-      Taste a variety of the top restaurants in your city
-      </Typography>
-      <div className={classes.subtitle}>
-      <form onSubmit={onFormSubmit}>
-
-      
-        <TextField
-          style={{padding:"5px 0"}}
-          fullWidth
-          InputLabelProps={{
-            classes: { root: classes.inputFont, focused: classes.focusedLabel },
-          }}
-          InputProps={{
-            classes: {
-              notchedOutline: classes.notchedOutline,
-              input: classes.inputFont,
-            },
-            "data-testid":"searchbar"
-          }}
-          label="Search City"
-          variant="outlined"
-          placeholder={"current city: "+props.city}
-          onChange={e => setTerm(e.target.value)}
-        />
-
-     
-        
-      
-      </form>
-      </div>
-    </Container>
+      <Container maxWidth="lg">
+        <Typography className={classes.title}>
+          Taste a variety of the top restaurants in your city
+        </Typography>
+        <div className={classes.subtitle}>
+          <form onSubmit={onFormSubmit}>
+            <TextField
+              style={{ padding: "5px 0" }}
+              fullWidth
+              InputLabelProps={{
+                classes: {
+                  root: classes.inputFont,
+                  focused: classes.focusedLabel,
+                },
+              }}
+              InputProps={{
+                classes: {
+                  notchedOutline: classes.notchedOutline,
+                  input: classes.inputFont,
+                },
+                "data-testid": "searchbar",
+              }}
+              label="Search City"
+              variant="outlined"
+              placeholder={"current city: " + props.city}
+              onChange={(e) => setTerm(e.target.value)}
+            />
+          </form>
+        </div>
+      </Container>
     </div>
   );
 }

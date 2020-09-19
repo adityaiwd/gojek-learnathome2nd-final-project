@@ -21,11 +21,12 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-    margin:-25,
+    margin:"15px -15px",
     color: "black",
     fontFamily: "Nexa",
-    fontSize: 25,
+    fontSize: 22,
     cursor: "pointer",
+    justifyContent:"center"
   },
   sectionMobile: {
     display: "flex",
@@ -57,8 +58,8 @@ function Navbar(props) {
           <Toolbar>
             <Typography className={classes.title} variant="h6">
               <FastfoodRoundedIcon
-                fontSize="large"
-                style={{ marginRight: 10 }}
+                
+                style={{ marginRight: 10,fontSize:25 }}
               />
               gozomato
             </Typography>
