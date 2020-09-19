@@ -4,7 +4,6 @@ import { parseCitySuggestions, parseSearchRestaurants } from "./utils";
 import FoodCard from "./FoodCard";
 import MobileFoodCard from "./MobileFoodCard";
 import {
-  Button,
   makeStyles,
   Grid,
   Typography,
