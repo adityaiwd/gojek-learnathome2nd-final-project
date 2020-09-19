@@ -117,7 +117,7 @@ function Content(props) {
       <Container maxWidth="lg">
         <div className={classes.titles}>
           <Typography className={classes.title} variant="h6">
-            {"Discovering food & drinks places in " +
+            {"Displaying food & beverage places in " +
               props.city.charAt(0).toUpperCase() +
               props.city.slice(1)}
           </Typography>

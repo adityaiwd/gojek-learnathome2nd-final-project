@@ -88,7 +88,7 @@ function Download() {
             <Typography paragraph className={classes.text}>
               Download GoZomato to enjoy the services.
             </Typography>
-            <div>
+            <div style={{marginBottom:10}}>
               <Button variant="contained" className={classes.download} style={{marginRight:20}}>
                 <PlayArrowRoundedIcon style={{marginRight:20}} fontSize="large"/>
                 <div style={{flexDirection:"column",alignItems:"left",fontFamily:"Nexa"}}>
@@ -106,6 +106,7 @@ function Download() {
                 </div>
               </Button>
             </div>
+            <Typography paragraph className={classes.text} style={{margin:0}}>* yes, these buttons doesn't work</Typography>
           </Grid>
           <Grid item lg={7}></Grid>
         </Grid>

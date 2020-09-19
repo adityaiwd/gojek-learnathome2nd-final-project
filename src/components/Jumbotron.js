@@ -70,10 +70,12 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 10,
     fontFamily: "Nexa",
     textTransform: "none",
-    backgroundColor: "white",
-    color: "black",
+    backgroundColor: "#00A7E1",
+    color: "white",
     "&:hover": {
-      backgroundColor: "#E0E0E0",
+      backgroundColor: "#007AA3",
+    color: "white",
+
     },
   },
 }));
