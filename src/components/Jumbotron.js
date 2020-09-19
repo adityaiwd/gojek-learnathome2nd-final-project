@@ -98,11 +98,12 @@ function Jumbotron(props) {
             classes: {
               notchedOutline: classes.notchedOutline,
               input: classes.inputFont,
-            }
+            },
+            "data-testid":"searchbar"
           }}
           label="Search City"
           variant="outlined"
-          placeholder={"current city: "+props.city}
+          placeholder={"current city: "}
           onChange={e => setTerm(e.target.value)}
         />
 
