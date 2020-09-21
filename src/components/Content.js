@@ -103,8 +103,8 @@ function Content(props) {
         const restaurants = parseSearchRestaurants(
           await searchRestaurants(cities[0].id)
         );
-        setLoading(false);
         setRestaurants(restaurants);
+        setLoading(false);
       } else {
         setRestaurants([]);
         setLoading(false);

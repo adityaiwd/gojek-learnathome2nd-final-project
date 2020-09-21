@@ -53,7 +53,7 @@ function MobileFoodCard({ data }) {
       <div style={{display:"flex",alignItems:"left",justifyContent:"center",flexDirection:"column"}}>
         <Typography
           className={classes.header}
-          style={{ fontFamily:"NexaBold,Arial, sans-serif", fontSize: 15, marginBottom: 7 }}
+          style={{ fontFamily:"NexaBold,Arial, sans-serif",fontWeight:"bold", fontSize: 15, marginBottom: 7 }}
         >
           {name}
         </Typography>
@@ -69,7 +69,7 @@ function MobileFoodCard({ data }) {
               style={{
                 fontSize: 12,
                 fontWeight: "bold",
-                fontFamily: "Montserrat",
+                fontFamily: "Montserrat,Arial, sans-serif",
                 display: "flex",
                 alignItems: "center",
               }}

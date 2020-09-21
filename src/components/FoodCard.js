@@ -59,7 +59,7 @@ function FoodCard({ data }) {
           title={
             <Typography
               className={classes.header}
-              style={{ fontFamily:"NexaBold", fontSize: 17, marginBottom: 10 }}
+              style={{ fontFamily:"NexaBold, Arial, sans-serif",fontWeight:"bold", fontSize: 17, marginBottom: 10 }}
             >
               {name}
             </Typography>
@@ -67,7 +67,7 @@ function FoodCard({ data }) {
           subheader={
             <Typography
               className={classes.header}
-              style={{fontFamily:"NexaLight", fontSize: 13, marginBottom: -15 }}
+              style={{fontFamily:"NexaLight,Arial, sans-serif", fontSize: 13, marginBottom: -15 }}
             >
               {cuisines}
             </Typography>
@@ -79,7 +79,7 @@ function FoodCard({ data }) {
               style={{
                 fontSize: 15,
                 fontWeight: "bold",
-                fontFamily: "Montserrat",
+                fontFamily: "Montserrat,Arial, sans-serif",
                 display: "flex",
                 alignItems: "center",
               }}
