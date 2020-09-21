@@ -10,6 +10,8 @@ import {
 import StarRoundedIcon from "@material-ui/icons/StarRounded";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import BrokenImageIcon from "@material-ui/icons/BrokenImage";
+import './font.css';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,8 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   header: {
-    fontFamily: "Nexa",
-    textTransform: "none",
+    textTransform: "none"
   },
   media: {
     height: 0,
@@ -58,7 +59,7 @@ function FoodCard({ data }) {
           title={
             <Typography
               className={classes.header}
-              style={{ fontWeight: "bold", fontSize: 17, marginBottom: 10 }}
+              style={{ fontFamily:"NexaBold", fontSize: 17, marginBottom: 10 }}
             >
               {name}
             </Typography>
@@ -66,7 +67,7 @@ function FoodCard({ data }) {
           subheader={
             <Typography
               className={classes.header}
-              style={{ fontSize: 13, marginBottom: -15 }}
+              style={{fontFamily:"NexaLight", fontSize: 13, marginBottom: -15 }}
             >
               {cuisines}
             </Typography>

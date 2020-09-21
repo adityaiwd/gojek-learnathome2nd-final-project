@@ -7,6 +7,7 @@ import {
   Container,
   Button
 } from "@material-ui/core";
+import './font.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     color: "white",
-    fontFamily: "Nexa",
+    fontFamily: "NexaBold,Arial, sans-serif",
     fontSize: 30,
     fontWeight: 500,
     textAlign: "center",
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
   subtitle: {
     color: "white",
-    fontFamily: "Nexa",
+    fontFamily: "Nexa,Arial, sans-serif",
     fontSize: 20,
     width: "100%",
     display:"inline",
@@ -68,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     padding: "5px 25px",
     marginTop: 10,
-    fontFamily: "Nexa",
+    fontFamily: "NexaBold",
     textTransform: "none",
     backgroundColor: "#00A7E1",
     color: "white",

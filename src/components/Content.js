@@ -11,6 +11,8 @@ import {
   CircularProgress,
 } from "@material-ui/core";
 import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
+import './font.css';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -29,12 +31,12 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     color: "black",
-    fontFamily: "Nexa",
+    fontFamily: "NexaBold",
     fontSize: 22.4,
     cursor: "pointer",
   },
   subtitle: {
-    fontFamily: "Nexa",
+    fontFamily: "NexaLight",
     fontSize: 17.6,
   },
   sectionMobile: {
@@ -48,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "10px 20px",
     fontSize: 17,
     marginBottom: 50,
-    fontFamily: "Nexa",
+    fontFamily: "NexaBold",
     textTransform: "none",
     color: "white",
     backgroundColor: "#00A7E1",
@@ -62,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "10px 20px",
     fontSize: 17,
     marginBottom: 50,
-    fontFamily: "Nexa",
+    fontFamily: "NexaBold",
     textTransform: "none",
     color: "white",
     backgroundColor: "#00A7E1",
