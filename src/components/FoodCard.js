@@ -18,11 +18,9 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 345,
     cursor: "pointer",
     position: "relative",
-    transitionProperty: "position bottom",
-    transitionDuration: "3s",
+    transition: "all .2s",
     "&:hover": {
-      bottom: 10,
-      position: "relative",
+      transform: "translateY(-10px)"
     },
   },
   header: {
