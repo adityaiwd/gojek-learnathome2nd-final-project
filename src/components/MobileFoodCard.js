@@ -6,7 +6,6 @@ import {
 import StarRoundedIcon from "@material-ui/icons/StarRounded";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import BrokenImageIcon from "@material-ui/icons/BrokenImage";
-import './font.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -53,13 +52,13 @@ function MobileFoodCard({ data }) {
       <div style={{display:"flex",alignItems:"left",justifyContent:"center",flexDirection:"column"}}>
         <Typography
           className={classes.header}
-          style={{ fontFamily:"NexaBold,Arial, sans-serif",fontWeight:"bold", fontSize: 15, marginBottom: 7 }}
+          style={{ fontWeight:"bold", fontSize: 15, marginBottom: 7 }}
         >
           {name}
         </Typography>
         <Typography
           className={classes.header}
-          style={{ fontFamily:"NexaLight,Arial, sans-serif", fontSize: 11, marginBottom: 5 }}
+          style={{ fontSize: 11, marginBottom: 5 }}
         >
           {cuisines}
         </Typography>
@@ -69,7 +68,6 @@ function MobileFoodCard({ data }) {
               style={{
                 fontSize: 12,
                 fontWeight: "bold",
-                fontFamily: "Montserrat,Arial, sans-serif",
                 display: "flex",
                 alignItems: "center",
               }}

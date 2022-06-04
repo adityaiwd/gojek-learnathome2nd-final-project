@@ -28,13 +28,11 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     color: "black",
-    fontFamily: "NexaBold",
     fontSize: 25,
     cursor: "pointer",
   },
   subtitle: {
     marginTop: 75,
-    fontFamily: "Nexa",
     fontSize: 30,
     fontWeight: "bold",
   },
@@ -47,7 +45,6 @@ const useStyles = makeStyles((theme) => ({
   download: {
     marginTop: 20,
     padding: "10px 20px",
-    fontFamily: "NexaBold",
     textTransform: "none",
     color: "white",
     backgroundColor: "#00171F",
@@ -63,7 +60,6 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     marginTop: 20,
-    fontFamily: "NexaLight",
     fontSize: 16,
   },
 }));
@@ -91,17 +87,17 @@ function Download() {
             <div style={{marginBottom:10}}>
               <Button variant="contained" className={classes.download} style={{marginRight:20}}>
                 <PlayArrowRoundedIcon style={{marginRight:20}} fontSize="large"/>
-                <div style={{flexDirection:"column",alignItems:"left",fontFamily:"Nexa"}}>
-                <Typography style={{textAlign:"left",fontFamily:"NexaLight"}}>Download the app at</Typography>
-                <Typography style={{alignItems:"left",fontFamily:"NexaBold",fontSize:20}}>Google Play</Typography>
+                <div style={{flexDirection:"column",alignItems:"left",}}>
+                <Typography style={{textAlign:"left",}}>Download the app at</Typography>
+                <Typography style={{alignItems:"left",fontSize:20}}>Google Play</Typography>
                     
                 </div>
               </Button>
               <Button variant="contained" className={classes.download}>
                 <AppleIcon style={{marginRight:20}} fontSize="large"/>
-                <div style={{flexDirection:"column",alignItems:"left",fontFamily:"Nexa"}}>
-                <Typography style={{textAlign:"left",fontFamily:"NexaLight"}}>Download the app at</Typography>
-                <Typography style={{alignItems:"left",fontFamily:"NexaBold",fontSize:20}}>App Store</Typography>
+                <div style={{flexDirection:"column",alignItems:"left",}}>
+                <Typography style={{textAlign:"left",}}>Download the app at</Typography>
+                <Typography style={{alignItems:"left",fontSize:20}}>App Store</Typography>
                     
                 </div>
               </Button>

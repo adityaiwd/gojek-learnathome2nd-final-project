@@ -8,7 +8,6 @@ import {
   Container,
 } from "@material-ui/core";
 import FastfoodRoundedIcon from "@material-ui/icons/FastfoodRounded";
-import './font.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     margin:"15px -15px",
     color: "black",
-    fontFamily: "NexaBold",
     fontSize: 22,
     cursor: "pointer",
     justifyContent:"center"
@@ -38,7 +36,6 @@ const useStyles = makeStyles((theme) => ({
   navButton: {
     marginLeft: 20,
     marginRight:-20,
-    fontFamily: "NexaBold",
     textTransform: "none",
     backgroundColor: "#00A7E1",
     "&:hover": {
@@ -65,7 +62,7 @@ function Navbar(props) {
               gozomato
             </Typography>
             <Typography
-              style={{ color: "black", fontFamily: "Nexa", fontSize:17}}
+              style={{ color: "black", fontSize:17}}
               variant="h6"
               className={classes.sectionDesktop}
             >

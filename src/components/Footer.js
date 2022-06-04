@@ -4,7 +4,6 @@ import {
     Typography,
     Container
   } from "@material-ui/core";
-import './font.css';
 
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -23,7 +22,6 @@ import './font.css';
       flexGrow: 1,
       margin:-25,
       color: "black",
-      fontFamily: "NexaLight",
       fontSize: 25,
       cursor: "pointer",
     },
@@ -36,7 +34,6 @@ import './font.css';
     navButton: {
       marginLeft: 20,
       marginRight:-25,
-      fontFamily: "Nexa",
       textTransform: "none",
       backgroundColor: "#00A7E1",
       "&:hover": {
@@ -50,7 +47,7 @@ function Footer() {
     return(
         <div className={classes.root}>
         <Container maxWidth="lg">
-            <Typography style={{textAlign:"right",fontFamily: "NexaLight"}}>© gozomato.co.id #learnathome goacademy</Typography>
+            <Typography style={{textAlign:"right"}}>© gozomato.co.id #learnathome goacademy</Typography>
         </Container>
         </div>
     );
